@@ -22,3 +22,12 @@ add_executable(DataPersistence
 
 target_include_directories(DataPersistence PRIVATE ${CMAKE_SOURCE_DIR})
 target_link_libraries(DataPersistence PRIVATE nlohmann_json::nlohmann_json)
+
+add_executable(MonitorTool
+    monitor_main.cpp
+    Tool/DataMonitor.cpp
+    Repository/JsonRepository.cpp
+)
+
+target_include_directories(MonitorTool PRIVATE ${CMAKE_SOURCE_DIR})
+target_link_libraries(MonitorTool PRIVATE nlohmann_json::nlohmann_json)
