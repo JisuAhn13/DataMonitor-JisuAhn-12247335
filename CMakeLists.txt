@@ -12,6 +12,10 @@ FetchContent_Declare(nlohmann_json
 )
 FetchContent_MakeAvailable(nlohmann_json)
 
+if(MSVC)
+    add_compile_options(/utf-8)
+endif()
+
 add_executable(DataPersistence
     main.cpp
     Model/UserModel.cpp
